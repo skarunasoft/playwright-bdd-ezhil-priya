@@ -9,7 +9,7 @@ Before({ timeout: 60000 },async function () {
     console.log('Before Scenario Hook: Starting a new step');
     const url = "https://www.saucedemo.com/";
 
-    this.browser = await chromium.launch({ headless: false });
+    this.browser = await chromium.launch({ headless: true });
     const context = await this.browser.newContext();
 
     this.page = await context.newPage();
